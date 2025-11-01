@@ -1,0 +1,53 @@
+{
+  "name": "typescript-library-template",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint . --fix",
+    "cleanOutDir": "rimraf dist",
+    "build": "npm run cleanOutDir && rollup --config rollup.config.ts --configPlugin typescript",
+    "build+format": "npm run format && npm run build",
+    "build+format+lint": "npm run format && npm run lint && npm run build",
+    "knip": "knip",
+    "postinstall": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/types": "^20.0.0",
+    "@eslint/js": "^9.39.0",
+    "@eslint/markdown": "^7.5.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.9.2",
+    "eslint": "^9.39.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "knip": "^5.66.4",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-unused-imports-configurable": "^1.15.0",
+    "rimraf": "^6.1.0",
+    "rollup": "^4.52.5",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-dts-minify": "^1.0.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
+  },
+  "overrides": {
+    "@eslint/core@>0.16.0": "0.16.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@eslint/core": "0.16.0"
+    }
+  },
+  "resolutions": {
+    "@eslint/core": "0.16.0"
+  }
+}
