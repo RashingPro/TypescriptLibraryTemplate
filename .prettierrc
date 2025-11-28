@@ -1,6 +1,6 @@
 {
   "trailingComma": "none",
   "arrowParens": "avoid",
-  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-unused-imports-configurable"],
+  "plugins": ["prettier-plugin-unused-imports-configurable", "@trivago/prettier-plugin-sort-imports"],
   "importOrderParserPlugins": ["typescript", "decorators-legacy"]
 }
