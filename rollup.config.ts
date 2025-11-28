@@ -1,9 +1,9 @@
-import typescriptPlugin, { RollupTypescriptOptions } from "@rollup/plugin-typescript";
+import jsonPlugin from "@rollup/plugin-json";
 import terserPlugin from "@rollup/plugin-terser";
+import typescriptPlugin, { RollupTypescriptOptions } from "@rollup/plugin-typescript";
 import { RollupOptions } from "rollup";
 import { dts as dtsPlugin } from "rollup-plugin-dts";
 import dtsMinifyPlugin from "rollup-plugin-dts-minify";
-import jsonPlugin from "@rollup/plugin-json";
 
 const outDir = "dist";
 
