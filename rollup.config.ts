@@ -12,8 +12,7 @@ export default [
         input: "src/index.ts",
         output: {
             dir: outDir,
-            format: "es",
-            sourcemap: true
+            format: "es"
         },
         plugins: [
             typescriptPlugin({
