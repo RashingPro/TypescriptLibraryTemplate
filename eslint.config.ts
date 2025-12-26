@@ -25,7 +25,15 @@ export default defineConfig([
             "no-empty-function": "off",
             "@typescript-eslint/no-empty-function": "off",
             "@typescript-eslint/no-namespace": "off",
-            "no-undef": "off"
+            "no-undef": "off",
+            "no-restricted-syntax": [
+                "error",
+                {
+                    selector: 'MethodDefinition[kind="get"], MethodDefinition[kind="set"]',
+                    message:
+                        "Getters and setters could create not obvious code execution flow. Please replace with method."
+                }
+            ]
         }
     },
     {
