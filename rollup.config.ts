@@ -16,7 +16,8 @@ export default [
         },
         plugins: [
             typescriptPlugin({
-                noEmitOnError: true
+                noEmitOnError: true,
+                rootDir: "src"
             }),
             terserPlugin({
                 keep_classnames: /^.*Error$/,
@@ -31,6 +32,15 @@ export default [
             dir: outDir,
             format: "es"
         },
-        plugins: [dtsPlugin(), dtsMinifyPlugin()]
+        plugins: [
+            dtsPlugin({
+                compilerOptions: {
+                    paths: {
+                        "@/*": ["src/*"]
+                    }
+                }
+            }),
+            dtsMinifyPlugin()
+        ]
     }
 ] as (RollupOptions & RollupTypescriptOptions)[];
