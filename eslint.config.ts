@@ -1,9 +1,9 @@
 import js from "@eslint/js";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
+import { defineConfig } from "eslint/config";
 import imports from "eslint-plugin-import";
 import unusedImports from "eslint-plugin-unused-imports";
-import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -43,11 +43,15 @@ export default defineConfig([
             "import/order": [
                 "error",
                 {
-                    groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
+                    groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+                    "newlines-between": "always",
+                    alphabetize: { order: "asc" }
                 }
             ],
             "import/newline-after-import": "error",
-            "import/no-useless-path-segments": "error"
+            "import/no-useless-path-segments": "error",
+            "unused-imports/no-unused-imports": "error",
+            "unused-imports/no-unused-vars": "warn"
         }
     },
     {
