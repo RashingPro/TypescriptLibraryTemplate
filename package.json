@@ -6,10 +6,10 @@
   "scripts": {
     "format": "prettier . --write",
     "lint": "eslint . --fix",
+    "format+lint": "npm run format && npm run lint",
     "cleanOutDir": "rimraf dist",
     "build": "npm run cleanOutDir && rollup --config rollup.config.ts --configPlugin typescript",
-    "build+format": "npm run format && npm run build",
-    "build+format+lint": "npm run format && npm run lint && npm run build",
+    "build+format+lint": "npm run format+lint && npm run build",
     "knip": "knip",
     "postinstall": "husky"
   },
