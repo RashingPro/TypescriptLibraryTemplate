@@ -40,6 +40,7 @@ export default defineConfig([
             "@typescript-eslint/no-empty-function": "off",
             "@typescript-eslint/no-namespace": "off",
             "no-undef": "off",
+            "no-empty": "warn",
             "no-restricted-syntax": [
                 "error",
                 {
