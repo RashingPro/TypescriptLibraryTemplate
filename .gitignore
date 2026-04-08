@@ -6,3 +6,9 @@
 
 # Dotenv
 *.env
+
+# IDEs and editors
+/.idea/*
+!/.idea/prettier.xml
+!/.idea/jsLinters
+/.vscode
